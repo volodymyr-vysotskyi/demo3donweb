@@ -6,10 +6,16 @@ const modelsSetup = {
         "cameraPosition": 150
     },
     "chair": {
-        "setPath": "./assets/chair_demo/",
-        "mtl": "guest_chair_1008_source.mtl",
-        "obj": "guest_chair_1008_source.obj",
+        "setPath": "./assets/chair/",
+        "mtl": "chair.mtl",
+        "obj": "chair.obj",
         "cameraPosition": 150
+    },
+    "43-rv_building_3": {
+        "setPath": "./assets/43-rv_building_3/",
+        "mtl": "Rv_Building_3.mtl",
+        "obj": "Rv_Building_3.obj",
+        "cameraPosition": 1000
     }
 };
 
@@ -22,10 +28,10 @@ const controlsSetup = (controls) => {
 
 // Lights
 const light1 = (scene) => {
-    const keyLight = new THREE.DirectionalLight(new THREE.Color('hsl(30, 100%, 75%)'), 1.0);
+    const keyLight = new THREE.DirectionalLight(new THREE.Color('hsl(160,100%,99%)'), 1.0);
     keyLight.position.set(-100, 0, 100);
 
-    const fillLight = new THREE.DirectionalLight(new THREE.Color('hsl(240, 100%, 75%)'), 0.75);
+    const fillLight = new THREE.DirectionalLight(new THREE.Color('hsl(64,100%,87%)'), 0.75);
     fillLight.position.set(100, 0, 100);
 
     const backLight = new THREE.DirectionalLight(0xffffff, 1.0);
@@ -34,6 +40,9 @@ const light1 = (scene) => {
     scene.add(keyLight);
     scene.add(fillLight);
     scene.add(backLight);
+
+    // var light = new THREE.HemisphereLight( 0xffffbb, 0x080820, 1 );
+    // scene.add( light );
 };
 
 const light2 = (scene) => {
@@ -122,7 +131,9 @@ const addRendererToDOM = (renderer) => {
 
 // Camera
 const cameraSetup = (camera) => {
-    camera.position.z = 200;
+    camera.position.z = 125;
+    camera.position.y = 50;
+    camera.position.x = 25;
 };
 
 // Render
@@ -133,7 +144,7 @@ const renderSetup = (renderer) => {
 
 const render = (model, light) => {
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 100000000000000000000);
+    const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
     const renderer = new THREE.WebGLRenderer({ alpha: true });
 
     const controls = new THREE.OrbitControls(camera, renderer.domElement);
@@ -166,4 +177,4 @@ const render = (model, light) => {
     animate();
 };
 
-render('chair', 1);
+render('43-rv_building_3', 1);
