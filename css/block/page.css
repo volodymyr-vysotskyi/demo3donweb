@@ -1,0 +1,25 @@
+.page {
+  flex-grow: 1;
+}
+
+
+/* --== Modifiers ==-- */
+
+.page--realty {
+  display: flex;
+  flex-direction: column;
+  background-image: url("../../image/CitiesNEW_LargeFeature_1536x1152.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: "Poppins", sans-serif;
+}
+
+.page__content--realty {
+  flex-grow: 1;
+  max-width: 1500px;
+}
+
+.page__content--main-realty {
+  display: flex;
+}

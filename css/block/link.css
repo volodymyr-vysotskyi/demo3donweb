@@ -1,0 +1,27 @@
+/* --== Modifiers ==-- */
+
+.link--logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.link--menu-realty {
+  text-decoration: none;
+  padding: 20px;
+  color: white;
+}
+
+.link--menu-realty:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+
+/* --== Media queries ==-- */
+
+@media (max-width: 960px) {
+  .link--menu-realty {
+    padding: 16px 16px;
+  }
+}

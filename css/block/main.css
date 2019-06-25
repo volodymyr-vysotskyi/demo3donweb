@@ -1,0 +1,70 @@
+/* --== Modifiers ==-- */
+
+.main--realty {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.main__col--realty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-basis: 50%;
+}
+
+.main__col--left-realty {
+  margin-right: 100px;
+}
+
+.main__content--realty {
+  display: flex;
+  flex-grow: 1;
+  max-width: 1500px;
+  padding: 0 40px;
+}
+
+.main__box--3d {
+  position: relative;
+  min-height: 500px;
+  background-color: grey;
+}
+
+.main__box--3d::before {
+  content: "3D";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* --== Media queries ==-- */
+
+@media (max-width: 1580px) {
+  .main__content--realty {
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .main__col--realty {
+    display: block;
+    flex-basis: auto;
+  }
+
+  .main__col--left-realty {
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+
+  .main__box--3d {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}

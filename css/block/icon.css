@@ -1,0 +1,34 @@
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: "Flaticon";
+  font-style: normal;
+}
+
+.flaticon-share:before { content: "\f100"; }
+.flaticon-building:before { content: "\f101"; }
+.flaticon-menu:before { content: "\f102"; }
+.flaticon-facebook:before { content: "\f103"; }
+.flaticon-twitter:before { content: "\f104"; }
+.flaticon-instagram:before { content: "\f105"; }
+.flaticon-menu-1:before { content: "\f106"; }
+.flaticon-shopping-bag:before { content: "\f107"; }
+.flaticon-magnifying-glass:before { content: "\f108"; }
+
+
+/* --== Modifiers ==-- */
+
+.icon--logo-realty {
+  font-size: 50px;
+  color: white;
+  margin-right: 10px;
+}
+
+
+
+/* --== Media queries ==-- */
+
+@media (max-width: 960px) {
+  .icon--logo-realty {
+    font-size: 40px;
+  }
+}
