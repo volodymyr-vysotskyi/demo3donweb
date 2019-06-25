@@ -128,12 +128,13 @@ const cameraSetup = (camera) => {
 // Render
 const renderSetup = (renderer) => {
     renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setClearColor( 0x000000, 0 );
 };
 
 const render = (model, light) => {
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 100000000000000000000);
-    const renderer = new THREE.WebGLRenderer();
+    const renderer = new THREE.WebGLRenderer({ alpha: true });
 
     const controls = new THREE.OrbitControls(camera, renderer.domElement);
     const mtlLoader = new THREE.MTLLoader();
@@ -145,7 +146,7 @@ const render = (model, light) => {
         3: light3
     };
 
-    scene.background = new THREE.Color(0x41acfa);
+    // scene.background = new THREE.Color(0x41acfa);
 
     cameraSetup(camera);
     renderSetup(renderer);

@@ -27,18 +27,18 @@
 .main__box--3d {
   position: relative;
   min-height: 500px;
-  background-color: grey;
+  /*background-color: grey;*/
 }
 
 .main__box--3d::before {
-  content: "3D";
+  /*content: "3D";*/
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 100px;
   font-weight: 600;
-  color: rgba(0, 0, 0, 0.2);
+  /*color: rgba(0, 0, 0, 0.2);*/
 }
 
 
